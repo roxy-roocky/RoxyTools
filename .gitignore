@@ -1,0 +1,14 @@
+# Godot editor files
+.godot/
+
+# Import files (generated, sauf si tu as des assets)
+*.import
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Export presets
+export_presets.cfg

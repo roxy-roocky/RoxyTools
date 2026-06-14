@@ -1,0 +1,25 @@
+name: Build Godot addon zip
+
+on:
+  release:
+    types: [published]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create plugin zip
+        run: zip -r RoxyVector2D-${{ github.event.release.tag_name }}.zip addons/RoxyVector2D/
+
+      - name: Upload to release
+        run: gh release upload ${{ github.event.release.tag_name }} RoxyVector2D-${{ github.event.release.tag_name }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

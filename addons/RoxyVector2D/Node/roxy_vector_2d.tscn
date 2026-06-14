@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bdgpmqjqxhfk5"]
+
+[ext_resource type="Script" uid="uid://dtp4mdon3bquh" path="res://addons/RoxyVector2D/Node/roxy_vector_2d.gd" id="1_71jqc"]
+
+[node name="RoxyVector2D" type="Node2D" unique_id=44615038]
+script = ExtResource("1_71jqc")
