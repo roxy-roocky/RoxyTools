@@ -5,7 +5,7 @@ class_name RoxyVector2D
 
 signal direction_changed()
 
-@export var direction:= new Vector2(0, 32):
+@export var direction:= Vector2(0, 32):
 	get: return direction
 	set(val):
 		direction = val
