@@ -29,7 +29,7 @@ func _enable_plugin() -> void:
 
 func _handles(object: Object) -> bool:
 	# Always return true so _forward_canvas_gui_input is called regardless of selection
-	return true
+	return object is RoxyVector2D
 
 
 func _disable_plugin() -> void:
